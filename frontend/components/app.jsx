@@ -9,10 +9,8 @@ import GreetingContainer from './greeting/greeting_container'
 const app = () => (
     <div className="header-div">
         <header>
-            <nav className="header-div">
-                <Link to="/" className="header-link">
+            <nav className="header-div">     
                     <h1>NeverNote</h1>
-                </Link>
                 <GreetingContainer />
             </nav>
         </header>
