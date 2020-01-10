@@ -1,0 +1,64 @@
+
+.splash-main-background{
+    font-family: "Soleil_Light",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    // display: flex;
+    background-image: url("https://media.giphy.com/media/39m7yjoW3YMw0sJGLd/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    width: 100%;
+
+    .splash-main-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 250px;
+
+        .splash-main-left{
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: white;
+            
+            .splash-main-header-text{
+                padding-bottom: 20px;
+                font-size: 56px;
+                
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+    
+            .splash-main-text{
+                font-size: 24px;
+                width: 80%;
+                margin-bottom: 35px;
+                line-height: 48px;
+            }
+    
+            .splash-main-signup-button{
+                color: #00A82D; 
+                font-size: 20px;
+                padding: 20px;
+                border-radius: 3px;
+            }
+            .splash-main-signup-button{
+                cursor: pointer;
+            }
+       }
+    
+       .splash-main-right{
+            justify-self: center;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 30px;
+            padding-bottom: 3px;
+       }
+    }
+
+   
+}

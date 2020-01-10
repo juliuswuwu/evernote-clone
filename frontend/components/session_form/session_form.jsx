@@ -40,37 +40,58 @@ class SessionForm extends React.Component {
         );
     }
     render(){
+
+        const bottomForm = this.props.formType === "login" ?(
+            <div className="bottomtext">
+                <h3>Don't have an account?</h3>
+                <p>{this.props.navLink}</p>
+            </div>
+        ) :(
+                <div className="bottomtext">
+                    <h3>Don't have an account?</h3>
+                    <p>{this.props.navLink}</p>
+                </div>
+        )
+
        return(
            <div className="login-form-container">
                <form onSubmit={this.handleSubmit} className="login-form-box">
-                   Welcome to NeverNote!
-          <br />
-                   Please {this.props.formType} or {this.props.navLink}
-                   {this.renderErrors()}
+                   <img className="evernote-logo" src="/assets/nevernote-logo" />
+                   <h2>Nevernote</h2>
+                <br/>
+                   <h4>Remember everything important</h4>
+                <br/>
                    <div className="login-form">
                        <br />
-                       <label>Email:
+                       <button className="sessionform-button" onClick={this.handleDemoSubmit}>Continue with Demo User</button>
+                        <br/>
               <input type="text"
                                value={this.state.email}
                                onChange={this.update('email')}
                                className="login-input"
-                           />
-                       </label>
+                               placeholder="Email"
+                               />
+
                        <br />
-                       <label>Password:
+
               <input type="password"
                                value={this.state.password}
                                onChange={this.update('password')}
                                className="login-input"
-                           />
-                       </label>
+                               placeholder="Password"
+                               />
+
                        <br />
-                       <button className="sessionform-button" onClick={this.handleDemoSubmit}>Continue with Demo User</button>
-                       <input className="session-submit" type="submit" value={this.props.formType} />
+                               {this.renderErrors()}
+                       
+                       <button className="sessionform-button2" onClick={this.handleSubmit}>Continue</button>
+                       {bottomForm}
                    </div>
                </form>
            </div>  
        ) 
+        
+
     }   
 }
 

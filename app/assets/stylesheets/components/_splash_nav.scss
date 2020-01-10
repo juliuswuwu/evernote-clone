@@ -1,0 +1,303 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.splash-nav-background {
+    background-color: #fff;
+}
+
+.splash-nav-bar {
+    display: flex;
+    justify-content: space-between;
+
+    .splash-nav-bar-left {
+        width: 65%;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 200px;
+            height: 65px;
+        }
+        
+        .splash-portfolio {
+            margin-left: 20px;
+
+            button {
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                margin-left: 10px;
+                font-weight: bold;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                border: none;
+                text-transform: uppercase;
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .splash-nav-bar-right {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .splash-nav-signup-button{
+            font-size: 14px;
+            color: rgb(0,168,45);
+            height: 100%;
+            letter-spacing: 0.5px;
+            align-self: center;
+            border: none;
+        }
+
+        .or{
+            letter-spacing: 0.5px;
+            font-size: 16px;
+        }
+
+        .splash-nav-login-button{
+            font-size: 14px;
+            color: rgb(0,168,45);
+            border: 2px solid rgb(0,168,45);
+            min-width: 120px;
+            padding: 40px, 120px;
+            margin-top: 7px;
+            margin-left: 9px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            height: 40px;
+        }
+
+        .splash-nav-signup-button:hover {
+            color: rgb(17, 196, 64);
+            cursor: pointer;
+        }
+
+    .splash-nav-login-button:hover{
+        color: rgb(17, 196, 64);
+        cursor: pointer;
+    }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .splash-nav-background{
+//     background-color: white;
+// }
+
+// .splash-nav-bar {
+//     // display: flex;
+//     width: 80%;
+//     // flex-wrap: nowrap;
+//     padding: 12px 30px;
+//     margin: 0 auto;
+// }
+
+// .evernote-full-name-logo{
+//     // display: flex;
+//     width: 200px;
+//     height: 65px;
+//     // justify-content: center;
+//     // align-self: center;
+//     padding-bottom: 2px;
+//     padding-left: 5px;
+//     padding-right: 10px;
+// }
+
+// .splash-portfolio{
+//     padding-bottom: 2px;
+//     padding-left: 2px;
+//     // align-self: flex-start;
+//     // justify-self: auto;
+//     margin-top: 23px;
+//     margin-left: 50px;
+//     margin-right: 450px;
+//     position: relative;
+// }
+
+// .github{
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     font-size: 14px;
+//     color: rgb(0, 0, 0);
+//     height: 100%;
+//     grid-column-start: 4;
+//     grid-column-end: 5;
+//     grid-row-start: 1;
+//     letter-spacing: 0.5px;
+//     margin-top: 2px;
+//     border: none;
+//     margin-right: 10px;
+// }
+
+// .linkedin{
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     font-size: 14px;
+//     color: rgb(0,0,0);
+//     align-self: center;
+//     height: 100%;
+//     grid-column-start: 4;
+//     grid-column-end: 5;
+//     grid-row-start: 1;
+//     letter-spacing: 0.5px;
+//     align-self: center;
+//     margin-top: 2px;
+//     border: none;
+//     margin-right: 10px;
+
+// }
+// .angelList{
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     font-size: 14px;
+//     color: rgb(0,0,0);
+//     align-self: center;
+//     height: 100%;
+//     grid-column-start: 4;
+//     grid-column-end: 5;
+//     grid-row-start: 1;
+//     letter-spacing: 0.5px;
+//     align-self: center;
+//     margin-top: 2px;
+//     border: none;
+//     margin-right: 10px;
+
+// }
+
+// .splash-nav-signup-button{
+//     font-size: 14px;
+//     color: rgb(0,168,45);
+//     height: 100%;
+//     grid-column-start: 4;
+//     grid-column-end: 5;
+//     grid-row-start: 1;
+//     letter-spacing: 0.5px;
+//     align-self: center;
+//     margin-top: 2px;
+//     margin-right: 10px;
+//     border: none;
+// }
+
+// .or{
+//     grid-column-start: 4;
+//     grid-column-end: 5;
+//     grid-row-start: 1;
+//     letter-spacing: 0.5px;
+//     height: 100%;
+//     font-size: 16px;
+//     color: rgb(0,0,0);
+//     align-self: center;
+//     margin-top: 17px;
+//     margin-right: 5px;
+
+// }
+
+// .splash-nav-login-button{
+//     font-size: 14px;
+//     color: rgb(0,168,45);
+//     border: 2px solid rgb(0,168,45);
+//     text-align: center;
+//     min-width: 120px;
+//     padding: 40px, 120px;
+//     margin-top: 7px;
+//     margin-left: 10px;
+//     border-radius: 3px;
+//     letter-spacing: 0.5px;
+//     font-weight: 600;
+//     height: 40px;
+// }
+
+
+// .github:hover {
+//     cursor: pointer;
+// }
+
+// .linkedin:hover {
+//     cursor: pointer;
+// }
+
+// .angelList:hover{
+//     cursor: pointer;
+// }
+
+// .splash-nav-signup-button:hover {
+//     color: rgb(17, 196, 64);
+//     cursor: pointer;
+// }
+
+// .splash-nav-login-button:hover{
+//     color: rgb(17, 196, 64);
+//     cursor: pointer;
+// }
+
+
+// div {
+//     display: block;
+// }
+
+// .splash-nav-bar {
+//     display: flex;
+//     justify-content: space-between;
+//     white-space: nowrap;
+
+//     .splash-nav-bar-left {
+//         width: 55%;
+//     }
+
+//     .splash-nav-bar-right {
+//         width: 40%;
+//     }
+
+// }

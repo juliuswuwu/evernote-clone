@@ -10,7 +10,6 @@ const app = () => (
     <div className="header-div">
         <header>
             <nav className="header-div">     
-                    <h1>NeverNote</h1>
                 <GreetingContainer />
             </nav>
         </header>
