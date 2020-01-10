@@ -9,7 +9,7 @@ const Greeting = ({ currentUser, logout }) => {
             <div className="splash-nav-background wrapper" >
                 <div className="splash-nav-bar">
                     <div className='splash-nav-bar-left'>
-                        {<img className="evernote-full-name-logo" src="/assets/nevernote" />}
+                        {<img className="evernote-full-name-logo" src={window.nevernoteURL} />}
 
                         <div className="splash-portfolio">
                             <button className="github">

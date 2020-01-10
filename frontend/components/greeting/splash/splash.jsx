@@ -24,7 +24,7 @@ const splash = () =>{
                 </div>
 
                 <div className="splash-main-right">
-                    <img className="splash-main-computer-image" src="/assets/computer"></img>
+                    <img className="splash-main-computer-image" src={window.computerURL}></img>
                 </div>
             </div>
 

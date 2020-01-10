@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
            <div className="session-background-color">
            <div className="login-form-container">
                <form onSubmit={this.handleSubmit} className="login-form-box">
-                   <img className="nevernote-logo2" src="/assets/nevernote-logo" />
+                   <img className="nevernote-logo2" src={window.nevernoteLogoURL} />
                    <h2>Nevernote</h2>
                 <br/>
                    <h4>Never forget anything important</h4>
