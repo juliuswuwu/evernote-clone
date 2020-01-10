@@ -1,0 +1,150 @@
+.session-background-color{
+    background-image: url(https://media.giphy.com/media/ZcdJJvDqTgdGZK8Xd3/giphy.gif);
+    background-size: cover;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    // position: relative;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+
+.login-form-container{
+    display: flex;
+    z-index: 15;
+    max-width: 512px;
+    width: 314px;
+    // width: 100vh;
+    // width: auto;
+    height: 100vh;
+    // margin: 0px auto 28px auto;
+    padding: 45px 99px 45px;
+    max-height: 600px;
+    // min-height: 450px;
+    margin: auto auto;
+    justify-self: center;
+    background: white;
+    box-shadow: 0px 4px 24px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    font-family: Helvetica, Arial, serif;
+    position: relative;
+    align-self: center;
+
+    .login-form-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nevernote-logo2{
+        height: 75px;
+        width: 75px;
+        align-self: center;
+        margin-top: 15px;
+    }    
+            h2{
+                align-self: center;
+                font-family: serif;
+                font-size: 48px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 16px;
+            }
+
+           .sessionform-button-demo{
+                width: 100%;
+                border: 1px solid #e6e6e6;
+                max-width: 300px;
+                padding: 11px 16px;
+                border-radius: 7px;
+                align-self: center;
+                font-size: 15px;
+                color: #6a6a6a;
+                text-align: center;
+                cursor: pointer;
+           } 
+
+           .line {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #ababab;
+                font-size: 14px;
+                // overflow: hidden;
+                width: 100%;
+                margin: 7px 0px 12px;
+            }
+
+
+           .line::after {
+                margin-right: 0.30em;
+            }
+
+            .line::before, .line::after {
+                content: '';
+                flex: 1;
+                border-bottom: 1px solid #d4d3d3;
+            }
+
+           .sessionform-button-demo:hover{
+               background-color: lightgray
+           }
+
+
+           .login-input{
+                box-sizing: border-box;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+                width: 100%;
+                color: #333333;
+                border: 1px solid #e6e6e6;
+                max-width: 280px;
+                padding: 12px 16px;
+                border-radius: 7px;
+                margin: 2px 0px;
+           }
+
+           .error{
+               color: #cc4539;
+               font-size: 12px;
+           }
+
+           .sessionform-button{
+               width: 100%;
+                border: 1px solid #e6e6e6;
+                color: white;
+                max-width: 300px;
+                padding: 11px 16px;
+                border-radius: 7px;
+                align-self: center;
+                font-size: 15px;
+                background-color: #51AA30;
+                text-align: center;
+                cursor: pointer;
+           }    
+            .sessionform-button:hover{
+               background-color: #00A82D;
+            }
+
+    
+        .bottomtext{
+            padding-top: 60px;
+            color: #737373;
+            text-align: center;
+            font-size: 14px;
+             a{
+                    text-decoration: none;
+                    color: #51AA30;
+                }
+        }
+
+    
+}

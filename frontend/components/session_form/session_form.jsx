@@ -23,8 +23,12 @@ class SessionForm extends React.Component {
 
     handleDemoSubmit(e) {
         e.preventDefault();
-        const user = { email: "demo@nevernote.com", password: "password" }
-        this.props.login(user);
+        this.setState(
+            { email: "demo@nevernote.com", 
+                password: "password"}, 
+                () => this.props.login(
+                    this.state));
+
     }
 
 
@@ -48,22 +52,29 @@ class SessionForm extends React.Component {
             </div>
         ) :(
                 <div className="bottomtext">
-                    <h3>Don't have an account?</h3>
+                    <h3>Already have an account?</h3>
                     <p>{this.props.navLink}</p>
                 </div>
         )
 
+
        return(
+           <>
+           <div className="session-background-color">
            <div className="login-form-container">
                <form onSubmit={this.handleSubmit} className="login-form-box">
-                   <img className="evernote-logo" src="/assets/nevernote-logo" />
+                   <img className="nevernote-logo2" src="/assets/nevernote-logo" />
                    <h2>Nevernote</h2>
                 <br/>
-                   <h4>Remember everything important</h4>
+                   <h4>Never forget anything important</h4>
                 <br/>
                    <div className="login-form">
                        <br />
-                       <button className="sessionform-button" onClick={this.handleDemoSubmit}>Continue with Demo User</button>
+                       <button className="sessionform-button-demo" onClick={this.handleDemoSubmit}>Continue with Demo User</button>
+                        <br/>
+                               <div className="line">
+                                   <div>or</div>
+                               </div>
                         <br/>
               <input type="text"
                                value={this.state.email}
@@ -82,13 +93,17 @@ class SessionForm extends React.Component {
                                />
 
                        <br />
+                            <div className="error">
                                {this.renderErrors()}
-                       
-                       <button className="sessionform-button2" onClick={this.handleSubmit}>Continue</button>
+                            </div>
+
+                       <button className="sessionform-button" onClick={this.handleSubmit}>Continue</button>
                        {bottomForm}
                    </div>
                </form>
            </div>  
+            </div>
+           </>
        ) 
         
 
