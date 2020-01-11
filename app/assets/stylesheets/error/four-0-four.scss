@@ -1,0 +1,28 @@
+.four-zero-four{
+
+    background-image: url(https://media.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.four-zero-four-button{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    padding-top: 45px;
+    padding: 11px 16px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.four-zero-four-button:hover{
+    background-color: red;
+}
