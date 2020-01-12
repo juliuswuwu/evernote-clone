@@ -1,5 +1,5 @@
 import React from 'react';
-import {closeModal} from '../actions/modal_action';
+import {closeModal} from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import ProfileModalContainer from '../components/home/profile_modal_container'
 

@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
-import {toggleModal} from '../../actions/modal_action';
+import {toggleModal} from '../../actions/modal_actions';
 class sidebar extends React.Component{
     constructor(props){
         super(props);
