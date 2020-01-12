@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL, TOGGLE_MODAL, CLOSE_CREATE_NOTEBOOKS_MODAL } from '../actions/modal_actions';
+import { OPEN_MODAL, CLOSE_MODAL, TOGGLE_MODAL } from '../actions/modal_action';
 
 export default function modalReducer(state = null, action) {
     switch (action.type) {
