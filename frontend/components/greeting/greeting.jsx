@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom' ;
 import Splash from './splash/splash'
+import Sidebar from '../home/sidebar'
 
 const Greeting = ({ currentUser, logout }) => {
     const createSession = () => (
@@ -40,9 +41,10 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
     );
     const userGreeting = () => (
-        <hgroup className="greeting-header">
+        <hgroup className="greeting-side-bar">
             <p> hi, {currentUser.email} </p>
             <button className="logout-button" onClick={logout}>Log Out</button>
+            <Sidebar/>
         </hgroup>
     );
     return currentUser ? userGreeting() : createSession();

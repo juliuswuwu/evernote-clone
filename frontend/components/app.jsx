@@ -7,11 +7,11 @@ import fourOfour from './error/four_zero_four';
 import {Link, Route} from 'react-router-dom'
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
 import GreetingContainer from './greeting/greeting_container'
-
+import Modal from './modal'
 const app = () => (
     <div className="header-div">
 
-            
+            {/* <Modal/> */}
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/" component={GreetingContainer} />
