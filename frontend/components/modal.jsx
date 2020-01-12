@@ -43,7 +43,9 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch =>{
-   closeModal: () => dispatch(closeModal())
+    return{
+        closeModal: () => dispatch(closeModal())
+    }
 }
 
 export default connect(mSTP, mDTP)(Modal)

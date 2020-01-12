@@ -14,8 +14,8 @@ class sidebar extends React.Component{
 
     render(){
         // debugger;
+        debugger;
         return(
-            
             <div className="wrapper">
                 <Link to="/" className= "side-bar-container">
                     <button className="profile-button" onClick={() => toggleModal('profile')}>profile</button>

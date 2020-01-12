@@ -11,7 +11,7 @@ import Modal from './modal'
 const app = () => (
     <div className="header-div">
 
-            {/* <Modal/> */}
+            <Modal/>
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/" component={GreetingContainer} />

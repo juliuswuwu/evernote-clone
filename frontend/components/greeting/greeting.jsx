@@ -40,6 +40,7 @@ const Greeting = ({ currentUser, logout }) => {
             <Splash/>
         </div>
     );
+    debugger;
     const userGreeting = () => (
         <hgroup className="greeting-side-bar">
             <p> hi, {currentUser.email} </p>

@@ -1,18 +1,8 @@
 .wrapper {
-    // display: grid;
-    // grid-template-columns: 67px 1fr minmax(40px, auto);
-    // grid-template-columns: 80px 400px;
-    // grid-template-rows: 80px repeat(10, 45px);
-    // grid-template-rows: repeat(10, 80px);
-    // grid-auto-flow: column;
-    // grid-row-gap: 10px;
-    // margin: auto;
+    
     display: flex;
     flex-flow: row wrap;
-    // justify-content: flex-end;
     width: 100%;
-    // background-color: red;
-    // width: 500px;
 }
 
 
