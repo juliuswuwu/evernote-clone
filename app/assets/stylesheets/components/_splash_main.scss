@@ -52,11 +52,15 @@
        }
     
        .splash-main-right{
+           margin-top: 150px;
             justify-self: center;
-            max-width: 80%;
-            height: auto;
             margin-bottom: 30px;
             padding-bottom: 3px;
+
+       }
+       .splash-main-computer-image{
+            max-width: 90%;
+            height: auto;
        }
     }
 
