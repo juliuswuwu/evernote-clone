@@ -1,35 +1,39 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
-import {toggleModal} from '../../actions/modal_actions';
-class sidebar extends React.Component{
+// import { openModal } from '../../actions/modal_actions';
+
+class Sidebar extends React.Component{
     constructor(props){
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-   
-    handleSubmit(e) {
-        this.props.closeModal();
-        this.props.toggleModal();
+        this.handleModal = this.handleModal.bind(this);
     }
 
+
+    handleModal(){
+        this.props.openModal('profile');
+    }
     render(){
         // debugger;
-        debugger;
+        const { currentUser } = this.props;
+
+        // let {openModal} = this.props;
+            // console.log(this.props);
         return(
-            <div className="wrapper">
-                <Link to="/" className= "side-bar-container">
-                    <button className="profile-button" onClick={() => toggleModal('profile')}>profile</button>
+            
+            <div className="side-bar-wrapper">
+                <div className= "side-bar-container">
+                    <button className="profile-button" onClick={this.handleModal}>{currentUser.email}⌄</button>
                     <div></div>
                     <div></div>
                     <div></div>
-                </Link>
+                </div>
             </div>
             
         )
     }
 }
 
-    export default sidebar;
+    export default Sidebar;
 
     
 

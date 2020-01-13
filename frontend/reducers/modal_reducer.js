@@ -6,8 +6,8 @@ export default function modalReducer(state = null, action) {
             return action.modal;
         case CLOSE_MODAL:
             return null;
-        case TOGGLE_MODAL:
-            return state === null ? action.modal : null;
+        // case TOGGLE_MODAL:
+        //     return state === null ? action.modal : null;
         default:
             return state;
     }

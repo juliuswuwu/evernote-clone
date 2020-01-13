@@ -15,25 +15,28 @@ class profileModal extends React.Component{
     }
 
     render(){
-        debugger
+        // debugger
         const{currentUser} = this.props;
             const profile = currentUser ? (
                 <div className="profile-modal">
-                    <span>profile</span>
-                    <span>{currentUser.email}</span>
-                    <div className="profile-portfolio">
-                        <button className="github">
+                    <div className="account">account</div>
+                    <div className= "profile-email">{currentUser.email}</div>
+                    <div className="divider"></div>
+                    <div className="profile-portfolio2">
+                        <button className="github2">
                             <a href="http://github.com" target='_blank'>github</a>
                         </button>
-                        <button className="linkedin">
+                        <button className="linkedin2">
                             <a href="http://linkedin.com" target='_blank'>linkedin</a>
                         </button>
-                        <button className="angelList">
+                        <button className="angelList2">
                             <a href="http://angelList.com" target='_blank'>angelList</a>
                         </button>
                     </div>
-
-                    <button onClick={this.handleSubmit}>Log Out</button>
+                    <div className="divider"></div>
+                    <button className="logout-btn"onClick={this.handleSubmit}>Log Out</button>
+                <div className="divider"></div>
+                    <div className="version">Nevernote v1.00.1</div>
                 </div>
             ): (
                 <div>

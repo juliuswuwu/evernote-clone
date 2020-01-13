@@ -17,7 +17,7 @@ function Modal({modal, closeModal}){
         case 'profile':
             component = <ProfileModalContainer/>;
             ModalTypeBackground= 'modal-background';
-            ModalTypeChild= "modalChild";
+            ModalTypeChild= "modal_child1";
             clickAction = closeModal;
             break;
         default:
