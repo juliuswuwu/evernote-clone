@@ -1,4 +1,4 @@
-import * as NoteAPIUtil from '../util/note_api';
+import * as NoteAPIUtil from '../../frontend/util/note_api'
 
 export const RECEIVE_NOTES = "RECEIVE_NOTES"
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
@@ -21,21 +21,21 @@ const removeNote = noteId => ({
 })
 
 export const fetchNotes = () => dispatch => (
-    NoteApiUtil.fetchNotes()
+    NoteAPIUtil.fetchNotes()
         .then(
-            notes => dispatch(receiveNote(notes))
+            notes => dispatch(receiveNotes(notes))
         )
 )
 
 export const fetchNote = noteId => dispatch => (
-    NoteApiUtil.fetchNote(noteId)
+    NoteAPIUtil.fetchNote(noteId)
         .then(
             note => dispatch(receiveNote(note))
         )
 )
 
 export const createNote = note => dispatch => (
-    NoteApiUtil.createNote(note)
+    NoteAPIUtil.createNote(note)
         .then(
             note => dispatch(receiveNote(note))
         )
@@ -43,15 +43,15 @@ export const createNote = note => dispatch => (
 
   export const updateNote = note => dispatch => (
     
-    NoteApiUtil.updateNote(note)
+      NoteAPIUtil.updateNote(note)
         .then(
-        updatedNote => dispatch(receiveNote(updatedNote))
+            note => dispatch(receiveNote(note))
         )
   )
 
   export const deleteNote = noteId => dispatch => (
-      NoteApiUtil.deleteNote(noteId)
+      NoteAPIUtil.deleteNote(noteId)
         .then(
-            removedNote => dispatch(removedNote(removedNote))
+            () => dispatch(removedNote(noteId))
         )
   )

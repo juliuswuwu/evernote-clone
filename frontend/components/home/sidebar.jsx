@@ -13,17 +13,16 @@ class Sidebar extends React.Component{
         this.props.openModal('profile');
     }
     render(){
-        // debugger;
         const { currentUser } = this.props;
 
-        // let {openModal} = this.props;
-            // console.log(this.props);
         return(
             
             <div className="side-bar-wrapper">
                 <div className= "side-bar-container">
                     <button className="profile-button" onClick={this.handleModal}>{currentUser.email}⌄</button>
-                    <div></div>
+                    <div>
+
+                    </div>
                     <div></div>
                     <div></div>
                 </div>

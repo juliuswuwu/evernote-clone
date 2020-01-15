@@ -1,5 +1,5 @@
 class Api::NotesController < ApplicationController
-    before_action :require_logged_in!
+    before_action :require_logged_in
 
     def index
         @notes = current_user.notes
@@ -13,9 +13,9 @@ class Api::NotesController < ApplicationController
     def create
         @note = Note.new(note_params)
         if params[:note][:title] == ""
-            @note.title = "Untitle Note"
+            @note.title = "Untitled Note"
         end
-
+        @note.user = current_user
         if @note.save
             render :show
         else
@@ -24,18 +24,18 @@ class Api::NotesController < ApplicationController
         
     end
 
-    def destory
+    def destroy
         @note = current_user.notes.find(params[:id])
-        @note.destory
+        @note.destroy
         render :show
     end
 
     def update
-        @note = current_user.notes.find(parmas[:id])
+        @note = current_user.notes.find(params[:id])
         if @note && @note.update(note_params)
             render :show
         else
-            render json: @note.errors.full_messages
+            render json: @note.errors.full_messages, status: 422
         end
     end
 

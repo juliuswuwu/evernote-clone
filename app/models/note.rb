@@ -1,5 +1,5 @@
 class Note < ApplicationRecord
-    validates :title, :user, :notebook, presence: true
+    validates :title, presence: true
 
     belongs_to :user,
     primary_key: :id,

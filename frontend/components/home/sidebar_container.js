@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal, closeModal, toggleModal } from '../../actions/modal_actions';
+import {createNote} from '../../actions/note_actions'
 import Sidebar from './sidebar';
 
 const mSTP  = ({entities, session})=>{
@@ -16,7 +17,8 @@ const mDTP = dispatch =>{
         logout: () => dispatch(logout()),
         openModal: modal => dispatch(openModal(modal)),
         closeModal: () => dispatch(closeModal()), 
-        toggleModal: (modal) => dispatch(toggleModal(modal))
+        toggleModal: (modal) => dispatch(toggleModal(modal)),
+        createNote: note => dispatch(createNote(note))
     }
 };
 export default connect(mSTP, mDTP)(Sidebar);

@@ -4,20 +4,30 @@ import {Provider} from 'react-dom'
 import LoginContainer from './session_form/login_form_container';
 import SignupContainer from './session_form/signup_form_container';
 import fourOfour from './error/four_zero_four';
-import {Link, Route} from 'react-router-dom'
-import { AuthRoute, ProtectedRoute } from "../util/route_util"
-import GreetingContainer from './greeting/greeting_container'
-import Modal from './modal'
+import {Link, Route} from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import GreetingContainer from './greeting/greeting_container';
+import Modal from './modal';
+import NoteShowContainer from './home/note/note_show_container';
+import NoteIndexContainer from './home/note/note_index_container';
+import NewNoteContainer from './home/note/new_note_container';
+
+
+
 const app = () => (
     <div className="header-div">
 
             <Modal/>
+            <Route exact path="/app/notes/:noteId" component={NoteShowContainer} />
+            <Route exact path="/app/notes" component={NoteIndexContainer}/>
+            <Route exact path="/app/new-note" component={NewNoteContainer} />
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/" component={GreetingContainer} />
-        <Switch>
+        {/* <Switch>
             <Route path="/:anything_else" component={fourOfour}/>
-        </Switch>
+            
+        </Switch> */}
 
 
     </div>
