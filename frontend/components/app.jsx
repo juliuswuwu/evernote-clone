@@ -25,10 +25,10 @@ const app = () => (
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/" component={GreetingContainer} />
-        <Switch>
+        {/* <Switch>
             <Route path="/:anything_else" component={fourOfour}/>
             
-        </Switch>
+        </Switch> */}
 
 
     </div>
