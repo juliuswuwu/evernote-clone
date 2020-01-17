@@ -1,6 +1,6 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-
+import {Link, Switch, Route, Redirect} from 'react-router-dom';
+import noteShowContainer from '../note/note_show_container';
 class NoteIndexItem extends React.Component{
     constructor(props){
         super(props);
@@ -39,7 +39,13 @@ class NoteIndexItem extends React.Component{
                     <div className="delete-note-btn">
                         <Link to="/" onClick={() => deleteNote(note.id)}>delete</Link>
                     </div>
-
+                {/* <Switch>
+                    <Route
+                        path="/app/:noteId"
+                        render={props => this.props.user? <NoteShowContainer id={note.id}/> : <Redirect to="/"/>
+                        }
+                    />
+                </Switch> */}
             </li>
         )
     }

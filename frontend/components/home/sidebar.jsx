@@ -45,6 +45,9 @@ class Sidebar extends React.Component{
     }
     render(){
         const { currentUser, ownProps } = this.props;
+        if(!currentUser.email){
+            return null;
+        }else{
         return(
             
             <div className="side-bar-wrapper">
@@ -59,6 +62,7 @@ class Sidebar extends React.Component{
             </div>
             
         )
+    }
     }
 }
 

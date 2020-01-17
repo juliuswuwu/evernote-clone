@@ -88,7 +88,7 @@
 
 .github2{
     a{
-                    text-decoration: none;
+        text-decoration: none;
                     color: rgb(50,50,50);
                 }
     letter-spacing: 0.5px;
@@ -107,8 +107,8 @@
 }
 .linkedin2{
     a{
-                    text-decoration: none;
-                    color: rgb(50,50,50);
+        text-decoration: none;
+        color: rgb(50,50,50);
                 }
     letter-spacing: 0.5px;
     align-items: center;
@@ -196,4 +196,11 @@
     color: #ddd;
     font-weight: 500;
     width: 100%;
+}
+
+.delete-note-btn{
+     a{
+        text-decoration: none;
+        color: rgb(50,50,50);
+    }
 }

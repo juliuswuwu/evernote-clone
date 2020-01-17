@@ -3,6 +3,8 @@ import React from 'react';
 import ReactQuill from 'react-quill';
 // import debounce from 'lodash';
 import {Form, Field} from 'react-final-form';
+import SidebarContainer from '../../home/sidebar_container';
+import NoteIndex from '../note/note_index_container';
 
 class NoteShow extends React.Component{
     constructor(props){
@@ -38,6 +40,9 @@ class NoteShow extends React.Component{
     }
 
     componentDidMount(){
+        if (this.props.match.params.noteId === undefined){
+            return null;
+        }
         this.props.fetchNote(this.props.match.params.noteId)
             .then((payload)=> this.setState(payload.note))
     }
@@ -83,27 +88,43 @@ class NoteShow extends React.Component{
    
 
     render(){
+
+        if (this.props.match.params.noteId === undefined){
+            return(null);
+        }else
         return(
-            <div className="text-editor-box">
-                <input
-                    type="text"
-                    value={this.state.title}
-                    placeholder="title"
-                    onChange={this.update("title")}
-                />
-                <ReactQuill
-                    theme="snow"
-                    modules={this.modules}
-                    value={this.state.body}
-                    onChange={this.update("body")}
-                    placeholder="Start typing..."
-                    autoFocus={this.state.title.length > 0 ? true : false}
-                />
-                {/* <button
-                    className="add-note"
-                    onClick={this.handleUpdateNote}>Update Note
-                </button> */}
+
+            <hgroup className="dash-board">
+                <div className="greeting-side-bar">
+                    <SidebarContainer />
+                </div>
+                <div className="index-container">
+                    <NoteIndex />
+                </div>
+                <div className="show-page">
+                    
+                <div className="text-editor-box">
+                    <input
+                        className="title-textbox"
+                        type="text"
+                        value={this.state.title}
+                        placeholder="title"
+                        onChange={this.update("title")}
+                    />
+                    <ReactQuill 
+                        className="body-textbox"
+                        theme="snow"
+                        modules={this.modules}
+                        value={this.state.body}
+                        onChange={this.update("body")}
+                        placeholder="Start typing..."
+                        autoFocus={this.state.title.length > 0 ? true : false}
+                    />
+                    
+                </div>
             </div>
+            </hgroup>
+
         )
     }
 }

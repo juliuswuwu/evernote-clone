@@ -1,6 +1,6 @@
 import React from 'react'
 import {Switch, Redirect} from 'react-router-dom'
-import {Provider} from 'react-dom'
+import {Provider, render} from 'react-dom'
 import LoginContainer from './session_form/login_form_container';
 import SignupContainer from './session_form/signup_form_container';
 import fourOfour from './error/four_zero_four';
@@ -18,19 +18,26 @@ const app = () => (
     <div className="header-div">
 
             <Modal/>
-            <Route exact path="/app/notes/:noteId" component={NoteShowContainer} />
-            <Route exact path="/app/notes" component={NoteIndexContainer}/>
-            <Route exact path="/app/new-note" component={NewNoteContainer} />
+            {/* <Route path="/" component={AllAppsComponents} */}
+        <ProtectedRoute exact path="/app/notes/:noteId" component={NoteShowContainer} />
+        <ProtectedRoute exact path="/app/notes" component={NoteIndexContainer}/>
+            {/* <Route exact path="/app/new-note" component={NewNoteContainer} /> */}
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/" component={GreetingContainer} />
-        {/* <Switch>
+        <Switch>
             <Route path="/:anything_else" component={fourOfour}/>
             
-        </Switch> */}
+        </Switch>
 
 
     </div>
 );
 
 export default app;
+
+// render() {
+//     <switch>
+//         <Route exact="/app/notes/:noteId"></Route>
+//     </switch>
+// }
