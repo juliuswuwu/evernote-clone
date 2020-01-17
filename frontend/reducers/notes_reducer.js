@@ -5,7 +5,7 @@ const notesReducer =(state ={}, action) => {
     let nextState = Object.assign({}, state);
     switch(action.type){
         case RECEIVE_NOTES:
-            return Object.assign({}, state, action.notes);
+            return Object.assign({}, action.notes);
         case RECEIVE_NOTE:
             return Object.assign({}, state, { [action.note.id]: action.note });
         case REMOVE_NOTE:

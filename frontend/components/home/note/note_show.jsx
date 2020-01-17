@@ -5,6 +5,8 @@ import ReactQuill from 'react-quill';
 import {Form, Field} from 'react-final-form';
 import SidebarContainer from '../../home/sidebar_container';
 import NoteIndex from '../note/note_index_container';
+// import { Link, withRouter } from 'react-router-dom';
+
 
 class NoteShow extends React.Component{
     constructor(props){
@@ -37,6 +39,13 @@ class NoteShow extends React.Component{
         // this.handleModal = this.handleModal.bind(this);
         // this.handleUpdateNote = this.handleUpdateNote.bind(this);
 
+    }
+
+    componentDidUpdate(prev){
+        if (prev.match.params.noteId !== this.props.match.params.noteId){
+            this.props.fetchNote(this.props.match.params.noteId)
+                .then((payload) => this.setState(payload.note))
+        }
     }
 
     componentDidMount(){
