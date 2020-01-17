@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom' ;
 import Splash from './splash/splash';
 import SidebarContainer from '../home/sidebar_container';
-
+import NoteIndex from '../home/note/note_index_container';
+import ShowPage from '../home/note/note_show_container'
 const Greeting = ({ currentUser, logout }) => {
     const createSession = () => (
        
@@ -42,8 +43,16 @@ const Greeting = ({ currentUser, logout }) => {
     );
     // debugger;
     const userGreeting = () => (
-        <hgroup className="greeting-side-bar">
+        <hgroup className="dash-board">
+        <div className="greeting-side-bar">
             <SidebarContainer/>
+        </div>
+        <div className="index-container">
+            <NoteIndex />
+        </div>
+        <div className="show-page">
+            <ShowPage/>
+        </div>
         </hgroup>
     );
     return currentUser ? userGreeting() : createSession();

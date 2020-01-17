@@ -6,6 +6,7 @@ class NoteIndexItem extends React.Component{
         super(props);
         this.state ={};
 
+        this.handleModal = this.handleModal.bind(this);
     }
 
     previewText(){
@@ -17,8 +18,12 @@ class NoteIndexItem extends React.Component{
         return preview
     }
 
+    handleModal() {
+        this.props.openModal('showPage');
+    }
+
     render(){
-        const {note, deleteNote} = this.props;
+        const {note, deleteNote, openModal} = this.props;
         return(
             <li className="list-of-notes">
                 <Link className="edit-note-link" to={`/app/notes/${note.id}`}>
@@ -30,11 +35,11 @@ class NoteIndexItem extends React.Component{
                         {this.previewText()}
                     </div>
 
+                </Link>
                     <div className="delete-note-btn">
                         <Link to="/" onClick={() => deleteNote(note.id)}>delete</Link>
                     </div>
 
-                </Link>
             </li>
         )
     }

@@ -3,11 +3,17 @@ import { logout } from '../../actions/session_actions';
 import { openModal, closeModal, toggleModal } from '../../actions/modal_actions';
 import {createNote} from '../../actions/note_actions'
 import Sidebar from './sidebar';
+import {fetchNotes} from '../../actions/note_actions';
 
-const mSTP  = ({entities, session})=>{
+
+
+
+const mSTP  = (state, ownProps)=>{
 
     return{
-        currentUser: entities.users[session.id]
+        currentUser: state.entities.users[state.session.id],
+        notes: Object.values(state.entities.notes),
+        ownProps
     }
 };
 

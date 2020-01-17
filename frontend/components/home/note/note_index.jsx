@@ -16,9 +16,13 @@ class NoteIndex extends React.Component{
         const {notes, deleteNote, updateNote} = this.props;
         const {openModal, closeModal} = this.props;
         return(
-            <div>
-                <h1>ALL NOTES</h1>
-                <h2>{notes.length}</h2>
+            <>
+                <div className="all-notes-header">
+                    <h3 className="all-notes-text">All Notes</h3>
+                    <h4 className="length-of-notes">{notes.length}</h4>
+                </div>
+                
+                
                 <ul className="All-notes">
                     {
                         notes.map((note)=>(
@@ -33,7 +37,7 @@ class NoteIndex extends React.Component{
                         ))
                     }
                 </ul>
-            </div>
+            </>
         )
     }
 

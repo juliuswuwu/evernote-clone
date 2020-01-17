@@ -3,8 +3,8 @@ import {withRouter} from 'react-router-dom'
 import newNote from './new_note';
 import {createNote, updateNote} from '../../../actions/note_actions';
 import {openModal, closeModal} from '../../../actions/modal_actions';
-const mSTP = state => ({
-
+const mSTP = (state, ownProp) => ({
+    
 });
 
 const mDTP = dispatch => ({

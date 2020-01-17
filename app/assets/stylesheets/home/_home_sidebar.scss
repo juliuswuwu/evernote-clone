@@ -1,3 +1,8 @@
+.dash-board{
+    display: flex;
+    flex-direction: row;
+}
+
 .side-bar-wrapper{
     display: flex;
     flex-flow: row wrap;
@@ -121,9 +126,9 @@
 }
 .angelList2{
     a{
-                    text-decoration: none;
-                    color: rgb(50,50,50);
-                }
+        text-decoration: none;
+        color: rgb(50,50,50);
+    }
     letter-spacing: 0.5px;
     align-items: center;
     display: flex;
@@ -170,4 +175,25 @@
 
  .divider{
     border-bottom: 1px solid #d4d3d3;
+}
+
+.side-button1{
+    min-height: 100px;
+}
+
+
+.New-note-btn{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 20px;
+    background-color: #21b546;
+    border: 0px;
+    color: #ddd;
+    font-weight: 500;
+    width: 100%;
 }

@@ -7,7 +7,7 @@ class Api::NotesController < ApplicationController
     end
 
     def show
-        @note = current_user.notes.find(params[:id])
+        @note = current_user.notes.find_by(id: params[:id])
     end
 
     def create
@@ -31,8 +31,8 @@ class Api::NotesController < ApplicationController
     end
 
     def update
-        @note = current_user.notes.find(params[:id])
-        if @note && @note.update(note_params)
+        @note = current_user.notes.find_by(id: params[:id])
+        if @note.update(note_params)
             render :show
         else
             render json: @note.errors.full_messages, status: 422

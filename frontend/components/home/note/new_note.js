@@ -38,9 +38,11 @@ class NewNote extends React.Component{
         }, 1000);
     }
 
+    
+
     update(field) {
         return e => {
-            if (field === 'title') {
+            if (field === 'Title') {
                 this.autoUpdateTime();
                 this.setState({ [field]: e.target.value })
             } else {
@@ -49,8 +51,6 @@ class NewNote extends React.Component{
             }
         };
     }
-
-
 
     render(){
         const {openModal, closeModal} = this.props;

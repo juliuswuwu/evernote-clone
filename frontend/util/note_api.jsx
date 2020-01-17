@@ -1,12 +1,14 @@
 export const fetchNotes = notes => (
     $.ajax({
         url: '/api/notes',
+        method: 'GET'
     })
 )
 
 export const fetchNote = noteId => (
     $.ajax({
-        url: `/api/notes/${noteId}`
+        url: `/api/notes/${noteId}`,
+        method: 'GET'
     })
 )
 

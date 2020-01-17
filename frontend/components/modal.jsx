@@ -2,6 +2,7 @@ import React from 'react';
 import {closeModal} from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import ProfileModalContainer from '../components/home/profile_modal_container'
+import ShowPageContainer from '../components/home/note/note_show_container'
 
 function Modal({modal, closeModal}){
     if(!modal){
@@ -20,6 +21,12 @@ function Modal({modal, closeModal}){
             ModalTypeChild= "modal_child1";
             clickAction = closeModal;
             break;
+        // case 'showPage':
+        //     component = <ShowPageContainer/>;
+        //     ModalTypeBackground = 'modal-background';
+        //     ModalTypeChild = "modal_child2";
+        //     clickAction = closeModal;
+        //     break;
         default:
             return null;
 

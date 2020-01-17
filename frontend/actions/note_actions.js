@@ -37,7 +37,7 @@ export const fetchNote = noteId => dispatch => (
 export const createNote = note => dispatch => (
     NoteAPIUtil.createNote(note)
         .then(
-            note => dispatch(receiveNote(note))
+            note => dispatch(receiveNote(note)),
         )
 )
 
@@ -52,6 +52,6 @@ export const createNote = note => dispatch => (
   export const deleteNote = noteId => dispatch => (
       NoteAPIUtil.deleteNote(noteId)
         .then(
-            () => dispatch(removedNote(noteId))
+            () => dispatch(removeNote(noteId))
         )
   )
