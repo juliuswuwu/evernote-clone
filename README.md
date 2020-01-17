@@ -1,24 +1,34 @@
-# README
+# NeverNote README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# [NeverNote-Site](http://nevernote-1.herokuapp.com/#/)
 
-Things you may want to cover:
 
-* Ruby version
+-----
 
-* System dependencies
+### Tech Stack
 
-* Configuration
+* Javascript
+* React
+* Redux
+* Rails
+* Ruby
+* PostgreSQL
 
-* Database creation
+-----
 
-* Database initialization
+NeverNote is a note taking application. In NeverNote, a user can create a NeverNote account with their email account. Inside the NeverNote app, user can create notes, edit notes, save notes, and delete notes. 
 
-* How to run the test suite
+-----
 
-* Services (job queues, cache servers, search engines, etc.)
+## Development setup
+```sh
+1. `npm install`
+2. `bundle install`
+3. `bundle exec rails db:setup`
+4. Run postgres
+5. `rails s` for Rails server
+6. `npm start` to run `webpack -w`
+7. Navigate to localhost:3000
+```
 
-* Deployment instructions
-
-* ...
+-----
