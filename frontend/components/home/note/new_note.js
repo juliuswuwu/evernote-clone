@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import ReactQuill from 'react-quill';
 import { openModal } from '../../../actions/modal_actions';
 
