@@ -15,13 +15,13 @@ const Greeting = ({ currentUser, logout }) => {
 
                         <div className="splash-portfolio">
                             <button className="github">
-                                <a href="http://github.com" target='_blank'>github</a>
+                                <a href="https://github.com/juliuswuwu" target='_blank'>github</a>
                             </button>
                             <button className="linkedin">
-                                    <a href="http://linkedin.com" target='_blank'>linkedin</a>
+                                <a href="https://www.linkedin.com/in/juliuswu/" target='_blank'>linkedin</a>
                             </button>
                             <button className="angelList">
-                                    <a href="http://angelList.com" target='_blank'>angelList</a>
+                                <a href="https://angel.co/julius-wu" target='_blank'>angelList</a>
                             </button>
                         </div>
                     </div>

@@ -24,13 +24,13 @@ class profileModal extends React.Component{
                     <div className="divider"></div>
                     <div className="profile-portfolio2">
                         <button className="github2">
-                            <a href="http://github.com" target='_blank'>Github</a>
+                            <a href="https://github.com/juliuswuwu" target='_blank'>Github</a>
                         </button>
                         <button className="linkedin2">
-                            <a href="http://linkedin.com" target='_blank'>Linkedin</a>
+                            <a href="https://www.linkedin.com/in/juliuswu/" target='_blank'>Linkedin</a>
                         </button>
                         <button className="angelList2">
-                            <a href="http://angelList.com" target='_blank'>AngelList</a>
+                            <a href="https://angel.co/julius-wu" target='_blank'>AngelList</a>
                         </button>
                     </div>
                     <div className="divider"></div>
