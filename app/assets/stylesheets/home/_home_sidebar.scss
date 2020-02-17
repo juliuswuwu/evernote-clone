@@ -17,7 +17,7 @@
     grid-template-columns: 225px;
     grid-template-rows: 82px repeat(3, 48px) 117px repeat(3, 48px) auto;
     height: 100vh;
-    width: 225px;
+    width: 230px;
     justify-items: center;
     align-items: baseline;
     cursor: unset;
@@ -184,19 +184,18 @@
 
 
 .New-note-btn{
-    list-style: none;
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    background-color: transparentize($color: #000000, $amount: 0);
+    color: rgb(204,211,211);
     font-size: 15px;
-    text-align: left;
-    font-size: 15px;
-    padding-left: 20px;
-    background-color: #21b546;
     border: 0px;
-    color: #ddd;
     font-weight: 500;
     width: 100%;
+}
+
+.New-note-btn:hover{
+    color: white;
+    cursor: pointer;
 }
 
 .delete-note-btn{

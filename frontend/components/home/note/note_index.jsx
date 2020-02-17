@@ -19,7 +19,7 @@ class NoteIndex extends React.Component{
             <>
                 <div className="all-notes-header">
                     <h3 className="all-notes-text">All Notes</h3>
-                    <h4 className="length-of-notes">{notes.length}</h4>
+                    <h4 className="length-of-notes">{notes.length} notes</h4>
                 </div>
                 
                 
