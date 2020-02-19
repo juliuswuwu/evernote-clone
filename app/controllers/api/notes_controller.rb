@@ -14,6 +14,7 @@ class Api::NotesController < ApplicationController
         @note = Note.new(note_params)
         if params[:note][:title] == ""
             @note.title = "Untitled Note"
+            
         end
         @note.user = current_user
         if @note.save
