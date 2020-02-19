@@ -1,6 +1,6 @@
 import * as NoteAPIUtil from '../../frontend/util/note_api'
 
-export const RECEIVE_NOTES = "RECEIVE_NOTES"
+export const RECEIVE_NOTES = "RECEIVE_NOTES";
 export const RECEIVE_NOTE = "RECEIVE_NOTE";
 export const REMOVE_NOTE = "REMOVE_NOTE";
 // export const RECEIVE_NOTE_ERRORS = "RECEIVE_NOTE_ERRORS"
