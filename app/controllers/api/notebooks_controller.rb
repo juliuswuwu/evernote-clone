@@ -2,8 +2,7 @@ class Api::NotebooksController < ApplicationController
     before_action :require_logged_in
 
     def index
-        @notebooks = Notebook.order('updated_at DESC').where(user_id: @current_user.id).includes(:notes)
-        render :index
+        @notebooks = current_user.notebooks.sort_by { |notebook| notebook.title }
     end
 
 
@@ -31,13 +30,9 @@ class Api::NotebooksController < ApplicationController
 
     def destroy
         @notebook = current_user.notebooks.find(params[:id])
-        if current_user.notebooks.length == 1 
-            render json: ["You must have at least one notebook"], status: 422 
-        else 
-            @notebook.destroy
-            @notes = @notebook.notes
-            render json: @notebook
-        end
+        @notebook.destroy
+
+        render :show
     end
 
     end
@@ -53,6 +48,6 @@ class Api::NotebooksController < ApplicationController
     end
     private
     def notebook_params
-        params.require(:notebook).permit(:id, :title, :user_id, :updated_at)
+        params.require(:notebook).permit(:title, :user_id, :updated_at)
     end
 end

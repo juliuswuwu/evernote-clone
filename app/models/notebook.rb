@@ -5,5 +5,6 @@ class Notebook < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
-    has_many :notes, dependent: :destroy 
+    has_many :notes, 
+        dependent: :destroy 
 end
