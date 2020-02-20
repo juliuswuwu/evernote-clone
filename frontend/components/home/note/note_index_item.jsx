@@ -39,13 +39,7 @@ class NoteIndexItem extends React.Component{
                     <div className="delete-note-btn">
                         <Link to="/" onClick={() => deleteNote(note.id)}>delete</Link>
                     </div>
-                {/* <Switch>
-                    <Route
-                        path="/app/:noteId"
-                        render={props => this.props.user? <NoteShowContainer id={note.id}/> : <Redirect to="/"/>
-                        }
-                    />
-                </Switch> */}
+                
             </li>
         )
     }

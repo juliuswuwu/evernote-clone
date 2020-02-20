@@ -5,8 +5,7 @@ import {openModal,closeModal} from '../../../actions/modal_actions';
 import noteIndex from './note_index';
 
 const mSTP = (state, ownProp) => {
-    return{
-    
+    return{  
     notes: Object.values(state.entities.notes)
 }}
 
