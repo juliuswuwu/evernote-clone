@@ -23,7 +23,7 @@ class Api::NotebooksController < ApplicationController
         if @notebook.save
             @notes = @notebook.notes
             render :show
-        else
+        else 
             render json: @notebook.errors.full_messages, status: 422
         end
     end
