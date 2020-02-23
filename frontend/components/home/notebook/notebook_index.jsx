@@ -17,7 +17,10 @@ class NotebookIndex extends React.Component{
         const {notebooks, deleteNotebooks, updateNotebook} = this.props;
         return(
             <>
-                
+                <h2>Notebooks</h2>
+                <h3>List of Notebooks</h3>
+
+            
             </>
         )
     }

@@ -48,6 +48,6 @@ class Api::NotebooksController < ApplicationController
     end
     private
     def notebook_params
-        params.require(:notebook).permit(:title, :user_id, :updated_at)
+        params.require(:notebook).permit(:title, :user_id, :updated_at) 
     end
 end
