@@ -14,12 +14,24 @@ class NotebookIndex extends React.Component{
     }
     
     render(){
-        const {notebooks, deleteNotebooks, updateNotebook} = this.props;
+        // const {notebooks, deleteNotebooks, updateNotebook} = this.props;
+        let notebooks;
+        if (this.props.notebooks !== undefined && this.props.notebooks.length !== 0){
+            notebooks = this.props.notebooks.map(notebook => (
+                <NotebookIndexItem
+                    key={notebook.id}
+                    notebook={notebook}
+                    noteIds={notebook.noteIds}
+                    openModal={this.props.openModal}
+                    deleteNotebook={this.props.deleteNotebook}
+                />
+            ))
+        }
         return(
             <>
                 <h2>Notebooks</h2>
                 <h3>List of Notebooks</h3>
-
+                
             
             </>
         )
