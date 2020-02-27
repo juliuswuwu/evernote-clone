@@ -19,6 +19,7 @@ const app = () => (
 
             <Modal/>
             {/* <Route path="/" component={AllAppsComponents} */}
+        
         <ProtectedRoute exact path="/app/notes/:noteId" component={NoteShowContainer} />
         <ProtectedRoute exact path="/app/notes" component={NoteIndexContainer}/>
             {/* <Route exact path="/app/new-note" component={NewNoteContainer} /> */}

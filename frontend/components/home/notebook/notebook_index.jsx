@@ -11,6 +11,7 @@ class NotebookIndex extends React.Component{
 
     componentDidMount(){
         this.props.fetchNotebooks();
+        this.props.fetchNotes();
     }
     
     render(){
@@ -22,16 +23,25 @@ class NotebookIndex extends React.Component{
                     key={notebook.id}
                     notebook={notebook}
                     noteIds={notebook.noteIds}
-                    openModal={this.props.openModal}
                     deleteNotebook={this.props.deleteNotebook}
                 />
             ))
         }
         return(
-            <>
+            <>  
                 <h2>Notebooks</h2>
                 <h3>List of Notebooks</h3>
                 
+
+                <section className="notebooks-frame">
+                    <ul className="notebooks-list">
+                        <ul className="notebooks-list-header">
+                            <li>TITLE</li>
+                            <li>ACTIONS</li>
+                        </ul>
+                        {notebooks}
+                    </ul>
+                </section>
             
             </>
         )

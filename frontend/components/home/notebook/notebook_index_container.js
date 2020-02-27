@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {fetchNotebooks, fetchNotebook, deleteNotebook, updateNotebook} from '../../../actions/notebook_actions';
+import {fetchNotes} from '../../../actions/note_actions';
 import notebookIndex from './notebook_index';
 import {withRouter} from 'react-router-dom';
 
@@ -11,6 +12,7 @@ const mSTP = (state, ownProp) => {
 
 const mDTP = dispatch => {
     return{
+        fetchNotes: () => dispatch(fetchNotes()),
         fetchNotebooks: () => dispatch(fetchNotebooks()),
         fetchNotebook: notebookId => dispatch(fetchNotebook(notebookId)),
         updateNotebook: notebook => dispatch(updateNotebook(notebook)),
