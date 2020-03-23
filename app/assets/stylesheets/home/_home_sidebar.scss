@@ -10,8 +10,9 @@
 }
 
 .side-bar-container{
-    background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
-    background-size: cover;
+    // background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+    // background-size: cover;
+    background-color: grey;
     z-index: 10;
     display: grid;
     grid-template-columns: 225px;
@@ -185,7 +186,7 @@
 
 .New-note-btn{
     font-family: 'Montserrat', sans-serif;
-    background-color: transparentize($color: #000000, $amount: 0);
+    background-color: transparentize($color: grey, $amount: 0);
     color: rgb(204,211,211);
     font-size: 15px;
     border: 0px;
