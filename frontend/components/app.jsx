@@ -11,7 +11,7 @@ import Modal from './modal';
 import NoteShowContainer from './home/note/note_show_container';
 import NoteIndexContainer from './home/note/note_index_container';
 import NewNoteContainer from './home/note/new_note_container';
-
+import NotebookIndexContainer from './home/notebook/notebook_index_container'
 
 
 const app = () => (
@@ -22,6 +22,7 @@ const app = () => (
         
         <ProtectedRoute exact path="/app/notes/:noteId" component={NoteShowContainer} />
         <ProtectedRoute exact path="/app/notes" component={NoteIndexContainer}/>
+        <ProtectedRoute exact path="/app/notebooks" component={NotebookIndexContainer}/>
             {/* <Route exact path="/app/new-note" component={NewNoteContainer} /> */}
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
