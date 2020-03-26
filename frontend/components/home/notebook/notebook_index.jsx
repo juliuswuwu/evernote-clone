@@ -40,6 +40,7 @@ class NotebookIndex extends React.Component{
                             <li>ACTIONS</li>
                         </ul>
                         {notebooks}
+                        
                     </ul>
                 </section>
             
