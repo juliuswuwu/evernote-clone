@@ -2,7 +2,8 @@ class Api::NotebooksController < ApplicationController
     before_action :require_logged_in
 
     def index
-        @notebooks = current_user.notebooks.sort_by { |notebook| notebook.title }
+        @notebooks = Notebook.where(user_id: current_user.id)
+        render :index
     end
 
 
@@ -31,11 +32,9 @@ class Api::NotebooksController < ApplicationController
     def destroy
         @notebook = current_user.notebooks.find(params[:id])
         @notebook.destroy
-
         render :show
     end
 
-    end
 
     def update
         @notebook = current_user.notebooks.find(params[:id])

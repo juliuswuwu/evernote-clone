@@ -19,7 +19,7 @@ const removeNotebook = notebookId => ({
     notebookId
 });
 
-export const fetchNotebooks = () => (
+export const fetchNotebooks = () => dispatch => (
     NotebookAPIUtil.fetchNotebooks()
         .then(
             notebooks => dispatch(receiveNotebooks(notebooks))

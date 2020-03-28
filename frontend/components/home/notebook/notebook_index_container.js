@@ -1,16 +1,18 @@
 import {connect} from 'react-redux';
 import {fetchNotebooks, fetchNotebook, deleteNotebook, updateNotebook} from '../../../actions/notebook_actions';
 import {fetchNotes} from '../../../actions/note_actions';
-import notebookIndex from './notebook_index';
+import NotebookIndex from './notebook_index';
 import {withRouter} from 'react-router-dom';
 
-const mSTP = (state, ownProp) => {
-    return{
+const mSTP = (state, ownProps) => {
+    return
+        {
         notebooks: Object.values(state.entities.notebooks)
-    }   
+    }
 }
 
 const mDTP = dispatch => {
+    // debugger
     return{
         fetchNotes: () => dispatch(fetchNotes()),
         fetchNotebooks: () => dispatch(fetchNotebooks()),
@@ -21,4 +23,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(notebookIndex);
+export default connect(mSTP, mDTP)(NotebookIndex);

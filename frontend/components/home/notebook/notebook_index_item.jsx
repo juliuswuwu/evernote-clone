@@ -24,3 +24,4 @@ class NotebookIndexItem extends React.Component{
 
 }
 
+export default NotebookIndexItem;
