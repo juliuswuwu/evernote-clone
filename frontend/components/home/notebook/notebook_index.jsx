@@ -30,7 +30,7 @@ class NotebookIndex extends React.Component{
         return(
             <>  
                 <h2>Notebooks</h2>
-                <h3>List of Notebooks</h3>
+                <h3>My notebook list</h3>
                 
 
                 <section className="notebooks-frame">
@@ -40,7 +40,7 @@ class NotebookIndex extends React.Component{
                             <li>ACTIONS</li>
                         </ul>
                         {notebooks}
-                        
+
                     </ul>
                 </section>
             
