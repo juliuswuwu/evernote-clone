@@ -3,7 +3,7 @@ import NotebookCreateForm from "./notebook_create_form";
 import {createNotebook} from "../../../actions/notebook_actions";
 
 const mSTP = (state) => ({
-    userId: state.session.currentUser.id
+    userId: users[session.id]
 })
 
 const mDTP = (dispatch) => ({

@@ -1,6 +1,7 @@
 import React from 'react';
 import NotebookIndexItem from './notebook_index_item';
 import {Link} from 'react-router-dom';
+import NotebookCreateFormContainer from './notebook_create_form_container';
 
 class NotebookIndex extends React.Component{
 
@@ -31,6 +32,7 @@ class NotebookIndex extends React.Component{
             <>  
                 <h2>Notebooks</h2>
                 <h3>My notebook list</h3>
+                <NotebookCreateFormContainer />
                 
 
                 <section className="notebooks-frame">
