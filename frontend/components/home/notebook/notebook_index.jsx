@@ -8,6 +8,7 @@ class NotebookIndex extends React.Component{
     constructor(props){
         super(props);
         this.state = {};
+        this.openModal = this.openModal.bind(this);
     }
 
     componentDidMount(){
@@ -15,6 +16,13 @@ class NotebookIndex extends React.Component{
         this.props.fetchNotes();
     }
     
+    openModal(){
+        let modal = document.querySelector(".notebook-create-form-modal");
+        if (modal){
+            modal.classList.add("notebook-create-form-modal-active");
+        }
+    }
+
     render(){
         // const {notebooks, deleteNotebooks, updateNotebook} = this.props;
         let notebooks;
@@ -28,10 +36,15 @@ class NotebookIndex extends React.Component{
                 />
             ))
         }
+
+
         return(
             <>  
                 <h2>Notebooks</h2>
                 <h3>My notebook list</h3>
+                <div onClick={this.openModal} className="new-notebook-btn">
+                    New Notebook
+                </div>
                 <NotebookCreateFormContainer />
                 
 

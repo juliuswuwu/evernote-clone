@@ -3,10 +3,10 @@ import React from 'react';
 class NotebookCreateForm extends React.Component{
     constructor(props) {
         super(props);
-        let userId = this.props.userId;
+        let currentUser = this.props.currentUser;
         this.state = {
             title: "",
-            user_id: userId
+            currentUser: currentUser
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,8 +14,8 @@ class NotebookCreateForm extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.createNotebook((this.state).then(()=> this.closeModal()))
-        this.setState({title: ""})
+        this.props.createNotebook(this.state).then(() => this.closeModal());
+        this.setState({title: ""});
     }
     
     handleChange(e) {
