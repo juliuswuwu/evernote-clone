@@ -5,6 +5,24 @@ export const fetchNotes = notes => (
     })
 )
 
+// export const fetchNotes = (notebook_id) => {
+//     let results;
+//     if (notebook_id){
+//         result = {
+//             notebook_id: notebook_id
+//         }
+//     } else {
+//         data = {}
+//     }
+//     return $.ajax({
+//         url: '/api/notes',
+//         method: 'GET',
+//         data: results
+//     })
+
+// }
+
+
 export const fetchNote = noteId => (
     $.ajax({
         url: `/api/notes/${noteId}`,
