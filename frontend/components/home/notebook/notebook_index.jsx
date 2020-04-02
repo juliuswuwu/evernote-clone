@@ -42,9 +42,9 @@ class NotebookIndex extends React.Component{
             <>  
                 <h2>Notebooks</h2>
                 <h3>My notebook list</h3>
-                <div onClick={this.openModal} className="new-notebook-btn">
+                <p onClick={this.openModal} className="new-notebook-btn">
                     New Notebook
-                </div>
+                </p>
                 <NotebookCreateFormContainer />
                 
 

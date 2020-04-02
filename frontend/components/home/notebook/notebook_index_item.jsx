@@ -1,5 +1,4 @@
 import {connect} from "react-dom";
-// import {DropTarget} from "react-dnd";
 // import { fetchNotebooks, fetchNotebook, deleteNotebook, updateNotebook } from '../../../actions/notebook_actions';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
