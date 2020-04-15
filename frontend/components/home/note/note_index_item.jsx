@@ -37,7 +37,9 @@ class NoteIndexItem extends React.Component{
 
                 </Link>
                     <div className="delete-note-btn">
-                        <Link to="/" onClick={() => deleteNote(note.id)}>delete</Link>
+                        <Link to="/" onClick={() => deleteNote(note.id)}>
+                        <img className="delete-icon" src={window.delete_logo}></img>
+                        </Link>
                     </div>
                 
             </li>
