@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+
     return{
         fetchNotes: () => dispatch(fetchNotes()),
         fetchNotebooks: () => dispatch(fetchNotebooks()),

@@ -4,7 +4,6 @@ import Root from './components/root'
 import configureStore from './store/store'
 import {fetchNotes, createNote, deleteNote} from './actions/note_actions';
 
-// debugger
 document.addEventListener("DOMContentLoaded", () => {
     let store;
     if (window.currentUser) {

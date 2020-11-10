@@ -15,7 +15,6 @@ class profileModal extends React.Component{
     }
 
     render(){
-        // debugger
         const{currentUser} = this.props;
             const profile = currentUser ? (
                 <div className="profile-modal">

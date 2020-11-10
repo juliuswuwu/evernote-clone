@@ -1,6 +1,5 @@
 import {Link, withRouter} from 'react-router-dom';
 import React from 'react';
-// import { openModal } from '../../actions/modal_actions';
 
 class Sidebar extends React.Component{
     constructor(props){
@@ -15,28 +14,17 @@ class Sidebar extends React.Component{
     }
 
     handleCreateNote(){
-        // console.log();
-        // let lastnoteindex = this.props.notes.length - 1
-        //    debugger;
         this.props.history.push(`/app/notes/${this.props.notes[this.props.notes.length - 1].id}`)
     }
 
 
     handleNewNote(e){
         e.preventDefault();
-        // if (this.props.location.pathname.slice(0, 6) === `/notes`){
         this.props.createNote({ title: "Untitled", body: "", user_id: this.props.currentUser.id, notebook_id: null})
                 .then(
                     this.handleCreateNote
                 )
-                // .then(()=>{
-                //     // let notes =Object.values(this.props.notes)
-                //     let lastnoteindex = this.props.notes.length-1
-                // //    debugger;
-                //     this.props.history.push(`/app/notes/${this.props.notes[lastnoteindex].id}`)
                     this.updateComponent
-                // })
-        // }
     }
 
 
