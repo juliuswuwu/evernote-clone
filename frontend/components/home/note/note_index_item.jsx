@@ -10,9 +10,9 @@ class NoteIndexItem extends React.Component{
     }
 
     previewText(){
-        const alltext = "<div>" + this.props.note.body + "</div>";
-        let preview = $(alltext).text().substring(0,70);
-        if (alltext.length > 71){
+        const allText = "<div>" + this.props.note.body + "</div>";
+        let preview = $(allText).text().substring(0,70);
+        if (allText.length > 71){
             preview += "..."
         }
         return preview
@@ -23,7 +23,7 @@ class NoteIndexItem extends React.Component{
     }
 
     render(){
-        const {note, deleteNote, openModal} = this.props;
+        const {note, deleteNote} = this.props;
         return(
             <li className="list-of-notes">
                 <Link className="edit-note-link" to={`/app/notes/${note.id}`}>

@@ -40,7 +40,7 @@ class Sidebar extends React.Component{
             
             <div className="side-bar-wrapper">
                 <div className= "side-bar-container">
-                    <button className="profile-button" onClick={this.handleModal}>{currentUser.email}⌄</button>
+                    <button className="profile-button" onClick={this.handleModal}>{currentUser.email}</button>
                     <div className="side-button1" onClick={this.handleNewNote}>
                         <button className="New-note-btn"> + New Note</button>
                     </div>

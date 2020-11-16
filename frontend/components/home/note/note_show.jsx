@@ -89,12 +89,6 @@ class NoteShow extends React.Component{
         };
     }
 
-    // handleUpdateNote(){
-    //     this.props.updateNote(this.state)
-    //         .then(()=> this.props.history.push('/app/notes'))
-    // }
-
-   
 
     render(){
 

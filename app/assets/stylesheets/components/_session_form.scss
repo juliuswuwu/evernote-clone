@@ -70,6 +70,7 @@
            } 
 
            .line {
+               padding-top: 10px;
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -81,9 +82,16 @@
             }
 
 
-           .line::after {
-                margin-right: 0.30em;
+            .line::before {
+               margin-left: 0.4em;
+                margin-right: 0.40em;
             }
+
+           .line::after {
+               margin-left: 0.4em;
+                margin-right: 0.40em;
+            }
+            
 
             .line::before, .line::after {
                 content: '';
